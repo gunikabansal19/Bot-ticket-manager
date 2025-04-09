@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Ticketing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.webp" alt="Bot Ticketing Manager">
+            <h1>Bot Ticketing Manager</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#Features">Features</a></li>
+                <li><a href="#Support">Support</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dark Mode Toggle -->
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider"></span>
+        </label>
+        <span>Dark Mode</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Bot Ticket Manager</h1>
+        <p>Effortless Ticket Management with AI Chatbot</p>
+        <button onclick="openChat()">Start Chat</button>
+    </section>
+
+     <!-- Features Section -->
+     <section class="features" id ="Features">
+        <h2>Why Use TicketBot?</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <h3>24/7 Support</h3>
+                <p>Get instant responses to your queries anytime.</p>
+            </div>
+            <div class="feature">
+                <h3>Easy Ticket Tracking</h3>
+                <p>Manage your tickets in a user-friendly interface.</p>
+            </div>
+            <div class="feature">
+                <h3>Smart AI Assistance</h3>
+                <p>AI-powered chatbot for automated responses.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Form -->
+    <section class="support-form" id ="Support">
+        <h2>Need Help? Contact Us</h2>
+        <form id="supportForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Describe your issue..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="responseMessage"></p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How do I reset my password? <span class="toggle">+</span></h3>
+            <p class="answer">Go to settings and click 'Reset Password'. Follow the instructions in the email.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I contact support? <span class="toggle">+</span></h3>
+            <p class="answer">Fill out the contact form above or email us at support@botticketing.com.</p>
+        </div>
+    </section>
+<!-- Contact Form -->
+<section class="contact-form" id ="Contact">
+    <h2>Get in Touch</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <textarea id="message" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p id="responseMessage"></p>
+</section>
+
+<!-- Contact Info & Social Links -->
+<section class="contact-info">
+    <h2>Contact Information</h2>
+    <p>Email: support@botticketing.com</p>
+    <p>Phone: +1 234 567 890</p>
+    <div class="social-links">
+        <a href="#" class="social-icon">🔵 Facebook</a>
+        <a href="#" class="social-icon">🟣 Instagram</a>
+        <a href="#" class="social-icon">🔷 LinkedIn</a>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 Bot Ticketing Manager. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Support</a>
+        </div>
+    </div>
+</footer>
+!-- Botpress Webchat Scripts -->
+  
+
+<script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/04/08/17/20250408171825-9PTV8OQ3.js"></script>
+    
+
+
+    <!-- Start Chat Button -->
+    <!-- <button id="startChat" onclick="openChat()">Start Chat</button> -->
+
+    <!-- Chatbot UI -->
+    <div class="chat-container hidden" id="chatbot">
+        <!-- Header -->
+        <div class="chat-header">
+            <h3>Ticket Bot</h3>
+            <button onclick="closeChat()">×</button>
+        </div>
+
+        <!-- Chat Information -->
+        <div class="chat-info">
+            <h4>How can we assist you?</h4>
+            <p>Our bot helps you with ticket management, issue tracking, and FAQs.</p>
+        </div>
+
+        <!-- Chat Body -->
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message bot">Hello! How can I assist you with ticketing?</div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h4>📌 Quick Help</h4>
+            <ul>
+                <li>✔️ How to create a ticket?</li>
+                <li>✔️ Check my ticket status</li>
+                <li>✔️ Talk to a human</li>
+                <li>✔️ Close a resolved ticket</li>
+            </ul>
+        </div>
+
+        <!-- Ticket Status Section -->
+        <div class="ticket-status">
+            <h4>🎫 Your Ticket Status</h4>
+            <p><strong>Last Ticket:</strong> Issue with login - <span style="color: yellow;">Pending</span></p>
+            <p><strong>Resolved Tickets:</strong> 2</p>
+        </div>
+
+        <!-- Chat Footer -->
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

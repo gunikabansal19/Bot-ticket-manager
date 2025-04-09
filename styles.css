@@ -1,0 +1,433 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    transition: background 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #64a6ed;
+    color: whitesmoke;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: #64a6ed;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background: white;
+    color: #64a6ed;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.hero button:hover {
+    background: #f0f0f0;
+}
+
+/* Features Section */
+.features {
+    padding: 40px 20px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+body.dark .feature {
+    background: #222;
+}
+/* Support Form */
+.support-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .support-form {
+    background: #222;
+}
+
+.support-form input,
+.support-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.support-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.support-form button:hover {
+    background: #0056b3;
+}
+
+/* FAQ Section */
+.faq {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.faq-item {
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+body.dark .faq-item {
+    background: #222;
+}
+
+.faq-item h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item .answer {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .contact-form {
+    background: #222;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+/* Contact Info */
+.contact-info {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .contact-info {
+    background: #222;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+}
+
+.social-icon:hover {
+    background: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+
+/* Dark Mode Footer */
+body.dark footer {
+    background: #222;
+}
+
+/* Side Chat Button */
+#startChat {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#startChat:hover {
+    background: #e64a19;
+}
+
+/* Hide chat initially */
+.hidden {
+    display: none;
+}
+
+
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    background: #1e1e1e;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.chat-header h3 {
+    margin: 0;
+}
+
+.chat-header button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.chat-body {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+.chat-footer {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.chat-footer button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chat-message {
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.bot {
+    background: #444;
+}
+
+.faq-section, .ticket-status {
+    background: #2c2c2c;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.faq-section h4, .ticket-status h4 {
+    margin-bottom: 5px;
+}
+
+.faq-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faq-section li {
+    background: #3c3c3c;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 3px;
+}
+
+
+/* Toggle Button */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #64a6ed;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
